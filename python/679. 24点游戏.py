@@ -1,4 +1,6 @@
 '''
+https://leetcode-cn.com/problems/24-game/description/
+679. 24点游戏
 你有 4 张写有 1 到 9 数字的牌。你需要判断是否能通过 *，/，+，-，(，) 的运算得到 24。
 
 示例 1:
