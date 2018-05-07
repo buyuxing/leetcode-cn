@@ -54,41 +54,6 @@ def findMedianSortedArrays1(nums1, nums2):
     else:
         return nums3[l//2]
         
-def findMedianSortedArrays2(nums1, nums2):
-    m = len(nums1)
-    n = len(nums2)
-    l = m + n
-    median1 = 0
-    median2 = 0
-    if m == 0 and n == 0:
-        return None
-    else:
-        i = 0
-        j = 0
-        half = m+n // 2
-        while i + j < half:
-            if nums1[i] < nums2[j]:
-                median1=median2
-                median2=nums1[i]
-                if(i < m - 1):
-                    i+=1
-                else:
-                    median1 = nums1[half-m - 2]
-                    median2 = nums2[half-m - 1]
-                    break
-            else:
-                median1=median2
-                median2=nums2[j]
-                if(j < n - 1):
-                    j+=1
-                else:
-                    median1 = nums1[half-n - 2]
-                    median2 = nums2[half-n - 1]
-                    break
-    if l % 2 == 0:
-        return (median1 + median2)/2
-    else:
-        return median2
 
 def findMedianSortedArrays(nums1, nums2):
     l = (nums1 + nums2).sort()
